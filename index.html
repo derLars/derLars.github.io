@@ -10,6 +10,8 @@
 			body{
 				margin: 20px;
 				background-color: #222;
+				color: #FFF;
+				text-align: justify;
 			}
 			h1 {
 				font-family: Ubuntu, sans-serif;
@@ -17,8 +19,58 @@
 				margin: 0;
 			}
 
+			figure {
+  				padding: 5px;
+  				float: right;
+  				border: 1px solid #cccccc;
+  				border-radius: 5px;
+			}
+
+			figure img {
+			  	border-radius: 3px 3px 0 0;
+			}
+
+			figure figcaption {
+			  	padding: 2px 4px 2px 4px;
+			  	background-color: #636363;
+			  	color: #cccccc;
+			  	font-style: italic;
+			  	border-radius: 0 0 3px 3px;
+			}
+
+			iframe {
+				padding: 5px;
+				float: right;
+  				border: 1px solid #cccccc;
+  				border-radius: 5px;
+			}
 		</style>
 	</head>
 	<body>
+		 
+		 	<h1>Documentation</h1>
+
+		 	<h2>Autonomous Railroad Control</h2>
+
+		 	I like Computer Science and System Engineering. After passing my third semester of Technical Computer Science I was looking for an interesting project which includes electrical development, programming and of course fun. One day I found my old model train in my parents' basement and this was the kickoff of this project. From This time I worked on it on every semester break.
+
+		 	<h3>The Project</h3>
+
+		 	The purpose of the project is to develop a system which controls a set of modeltrains by itself without using or just copying available systems. The only original parts will be the rails, the coils to control the switches, the power supply and of course the trains including the signal decoder. Everything else I will develop by myself. 
+
+		 	<h3>The digital signal </h3>
+	 	
+			<figure>
+		 		<img width="300" height="200" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" alt="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" title="Visual definition of a DCC signal."><figcaption>Source Wikipedia</figcaption>
+			</figure>
+			The used digital standard to pass the instructions to the trains is DCC (Digital Command Control) which modulates the voltage of the power supply. DCC standard regulates a bidirectional square-wave voltage. The length of the time the voltage is applied in each direction provides the method for encoding data.
+		 	To send a digital one, the half cycle of the signal is 58µs then it changes its voltage in the negative direction for another 58µs. The digital zero takes a half cycles at least nearly twice as long. As mentioned the train already includes a decoder. So the only need is to encode the signal.</p>
+
+		 	<h3>Power supply</h3>
+		 	I already own a power supply from Fleischmann which supplies 16.5V, 2.73A alternate current. To supply the trains the sinus-waved voltage must be converted into a square-waved voltage with 15V. In addition to that 5V is needed to supply the microcontroller in the system. Therefore I developed the 'Voltage Control' which transforms the alternate current into a direct current and provides a 15V output and a 5V output. 
+
+			<h3>Enconding the signal</h3>
+		 	
+					 	<iframe width="560" height="315" src="https://www.youtube.com/embed/XuPn8Hw9MqA" frameborder="0" allowfullscreen></iframe>
 	</body>
 </html>
