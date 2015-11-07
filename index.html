@@ -60,40 +60,161 @@
 			}
 		</style>
 	</head>
-	<body>
-		 
+	<body>	 
 		 	<div>
 		 		<h1><center>Documentation</center></h1>
 
-		 		<h2><center>Autonomous Railroad Control</center></h2>
-		 		<p>
-		 			I like Computer Science and System Engineering. After passing my third semester of Technical Computer Science I was looking for an interesting project which includes electrical development, programming and of course fun. One day I found my old model train in my parents' basement and this was the kickoff of this project. From This time on I worked on it on every semester break.
-		 		</p>		 	
-		 	</div>
-		 	<div>
-		 		<h3>The Project</h3>
-		 		<p>
-		 			The purpose of the project is to develop a system which controls a set of modeltrains by itself without using or just copying available systems. The only original parts will be the rails, the coils to control the switches, the power supply and of course the trains including the signal decoder. Everything else I will develop by myself. 
-		 		</p>
-		 	</div>
-		 	<div>
-				<h3>The digital signal </h3>
-	 	
-				<a href="https://en.wikipedia.org/wiki/Digital_Command_Control">
-				<figure>
-			 		<img width="300" height="200" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" alt="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" title="Visual definition of a DCC signal."><figcaption>Source Wikipedia</figcaption>
-				</figure></a>
-				<p>
-					The used digital standard to pass the instructions to the trains is DCC (Digital Command Control) which modulates the voltage of the power supply. DCC standard regulates a bidirectional square-wave voltage. The length of the time the voltage is applied in each direction provides the method for encoding data.
-			 		To send a logical one, the half cycle of the signal is 58µs then it changes its voltage in the negative direction for another 58µs. The logical zero takes a half cycles at least nearly twice as long. For more information see <a href="http://www.morop.eu/de/normes/nem670_d.pdf">NEM 670</a> and <a href="http://www.morop.eu/de/normes/nem671_d.pdf">NEM 671</a>. As mentioned the train already includes a decoder. So the only need is to encode the signal.
-			 	</p>
-		 	</div>
-		 	<div>
-		 		<h3>Power supply</h3>
+		 		<figure>
+					<h2><center>Autonomous Railroad Control</center></h2>
+			 		<p>
+			 			I like Computer Science and System Engineering. After passing my third semester of Technical Computer Science I was looking for an interesting project which includes electrical development, programming and of course fun. One day I found my old model train in my parents' basement and this was the kickoff of this project. From This time on I worked on it on every semester break.
+			 		</p>		 	
 
+			 		<h3>The Project</h3>
+			 		<p>
+			 			The purpose of the project is to develop a system which controls a set of modeltrains by itself without using or just copying available systems. The only original parts will be the rails, the coils to control the switches, the power supply and of course the trains including the signal decoder. Everything else I will develop by myself. 
+			 		</p>
+
+		 		</figure>		 			 	
+		 	</div>
+		 	<div>
+				<figure>
+					<h3>The digital signal </h3>
+		 	
+					<a href="https://en.wikipedia.org/wiki/Digital_Command_Control">
+					<figure>
+				 		<img width="300" height="200" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" alt="https://upload.wikimedia.org/wikipedia/commons/d/d5/DCCsig.png" title="Visual definition of a DCC signal."><figcaption>Source Wikipedia</figcaption>
+					</figure></a>
+					<p>
+						The used digital standard to pass the instructions to the trains is DCC (Digital Command Control) which modulates the voltage of the power supply. DCC standard regulates a bidirectional square-wave voltage. The length of the time the voltage is applied in each direction provides the method for encoding data.
+				 		To send a logical one, the half cycle of the signal is 58µs then it changes its voltage in the negative direction for another 58µs. The logical zero takes a half cycles at least nearly twice as long. For more information see <a href="http://www.morop.eu/de/normes/nem670_d.pdf">NEM 670</a> and <a href="http://www.morop.eu/de/normes/nem671_d.pdf">NEM 671</a>. As mentioned the train already includes a decoder. So the only need is to encode the signal.
+				 	</p>
+			 	</figure>
+		 	</div>
+		 	<div>	 		
+		 		<figure>
+		 			<h3>Power supply</h3>
+
+		 			<figure>
+						<a href="SubPages/VoltageControl_Development_1_20140824.html">
+				 			<img width="320" height="416" src="Images/VoltageControl_Development_1_20140824.jpg" title="Circuit test 5V">
+				 		</a>
+				 		<figcaption>Circuit test. 5V</figcaption>
+					</figure>
+		 			<figure>
+				 		<a href="SubPages/VoltageControl_Development_20140824.html">
+				 		<img width="320" height="416" src="Images/VoltageControl_Development_20140824.jpg" title="Circuit test 15V">
+				 		<figcaption>Circuit test. 15V</figcaption>
+						</a>
+					</figure>
+		 			<h4>Hardware</h4>
+
+			 		<table style="width:45%">
+						<thead>
+							<tr>
+		    					<td>Part</td>
+		    					<td>Decription</td>
+		    					<td>Quantity</td>
+		    				</tr>
+						</thead>
+						<tbody>
+							<tr>
+		    					<td>Fleischmann power supply</td>
+		    					<td>In: 230V AC; Out: 16.5V, 2,73A AC</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Rectifier</td>
+		    					<td>B250 - C3700/2200</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Potentiometer</td>
+		    					<td>1K Ohm</td>
+		    					<td>2</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Capacitor</td>
+		    					<td>100µF 50V</td>
+		    					<td>3</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Diode</td>
+		    					<td>1N4148</td>
+		    					<td>2</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Voltage regulator</td>
+		    					<td>LM350 Out: 1.2V - 33V, 3A</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Voltage regulator</td>
+		    					<td>LM317 Out: 1.25V - 37V, 1.5A</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Resistor</td>
+		    					<td>120 Ohm</td>
+		    					<td>3</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Resistor</td>
+		    					<td>1K Ohm</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Resistor</td>
+		    					<td>2K Ohm</td>
+		    					<td>1</td>
+		    				</tr>
+		    				<tr>
+		    					<td>Resistor</td>
+		    					<td>100K Ohm</td>
+		    					<td>1</td>
+		    				</tr>
+	    				</tbody>
+			 		</table>		 			 		
+
+			 		
+
+					<h4>Decription</h4>	 		
+			 		
+					<p>
+			 			The power supply supplies the Voltage Control with 16.5V AC. The Voltage Control generates two independend DC voltages from it. The first one is 15V DC to supply the trains and the second one is 5V DC to supply the microcontroller in the system. The voltages are adjustable by potentiometers and can be independently disconnected by jumper. 
+			 		</p>	
+
+					<figure>
+			 			<a href="SubPages/VoltageControl_Version2_20150126.html">
+				 			<img width="320" height="266" src="Images/VoltageControl_Version2_20150126.jpg" title="Voltage Control">
+						</a>
+			 			<figcaption>Voltage Control module</figcaption>
+					</figure>	
+
+	
+			 		
+		 		 </figure>
+		 	</div>
+	 		<div>
+		 		<figure>
+		 		<h3>Signal encoder</h3>
+
+		 		<figure>
+					<a href="SubPages/SignalGenerator_Development_Test_20150128.html">
+			 			<img width="320" height="244" src="Images/SignalGenerator_Development_Test_20150128.jpg" title="Circuit test 5V">
+			 		</a>
+			 		<figcaption>Signal generator module</figcaption>
+				</figure>
+		 		<figure>
+			 		<a href="SubPages/SignalGenerator_H-Bridge_4_20150126.html">
+			 		<img width="320" height="244" src="Images/SignalGenerator_H-Bridge_4_20150126.jpg" title="Circuit test 15V">
+					</a>
+			 		<figcaption>Signal generator test</figcaption>
+				</figure>
+				
 		 		<h4>Hardware</h4>
 
-		 		<table style="width:50%">
+	 			<table style="width:40%">
 					<thead>
 						<tr>
 	    					<td>Part</td>
@@ -103,79 +224,74 @@
 					</thead>
 					<tbody>
 						<tr>
-	    					<td>Fleischmann power supply</td>
-	    					<td>In: 230V AC; Out: 16.5V, 2,73A AC</td>
-	    					<td>1</td>
+	    					<td>MOSFET driver</td>
+	    					<td>MCP1407 E/P</td>
+	    					<td>2</td>
 	    				</tr>
 	    				<tr>
-	    					<td>Rectifier</td>
-	    					<td>B250 - C3700/2200</td>
-	    					<td>1</td>
+	    					<td>P-Channel MOSFET</td>
+	    					<td>IRF 9530</td>
+	    					<td>2</td>
 	    				</tr>
 	    				<tr>
-	    					<td>Potentiometer</td>
-	    					<td>1K Ohm</td>
+	    					<td>N-Channel MOSFET</td>
+	    					<td>IRF 530A</td>
 	    					<td>2</td>
 	    				</tr>
 	    				<tr>
 	    					<td>Capacitor</td>
-	    					<td>100µF 50V</td>
-	    					<td>3</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Diode</td>
-	    					<td>1N4148</td>
+	    					<td>100nF 63V</td>
 	    					<td>2</td>
 	    				</tr>
 	    				<tr>
-	    					<td>Voltage regulator</td>
-	    					<td>LM350 Out: 1.2V - 33V, 3A</td>
-	    					<td>1</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Voltage regulator</td>
-	    					<td>LM317 Out: 1.25V - 37V, 1.5A</td>
-	    					<td>1</td>
-	    				</tr>
-	    				<tr>
 	    					<td>Resistor</td>
-	    					<td>120 Ohm</td>
-	    					<td>3</td>
+	    					<td>82 Ohm</td>
+	    					<td>2</td>
 	    				</tr>
 	    				<tr>
 	    					<td>Resistor</td>
 	    					<td>1K Ohm</td>
-	    					<td>1</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Resistor</td>
-	    					<td>2K Ohm</td>
-	    					<td>1</td>
+	    					<td>2</td>
 	    				</tr>
 	    				<tr>
 	    					<td>Resistor</td>
 	    					<td>100K Ohm</td>
-	    					<td>1</td>
+	    					<td>2</td>
 	    				</tr>
     				</tbody>
-		 		</table>		 			 		
-
-		 		<figure>
-			 		<a href="SubPages/VoltageControl_Development_20140824.html">
-			 		<img width="244" height="320" src="Images/VoltageControl_Development_20140824.jpg" title="Circuit test 15V">
+		 		</table>		
+		 		<h4>Description</h4>
+				<figure>
+			 		<a href="SubPages/GeneratedSignal_20150128.html">
+			 		<img width="320" height="244" src="Images/GeneratedSignal_20150128.jpg" title="Generated signal">
 					</a>
-					<a href="SubPages/VoltageControl_Development_1_20140824.html">
-			 			<img width="244" height="320" src="Images/VoltageControl_Development_1_20140824.jpg" title="Circuit test 5V">
-			 		</a>
-			 		<figcaption>Circuit test. Left side: 15V, right side: 5V</figcaption>
+			 		<figcaption>Generated signal on USB oscilloscope</figcaption>
 				</figure>
-				
-				<h4>Decription</h4>
-		 		
-		 		<p>
-		 			The power supply supplies the Voltage Control with 16.5V AC. The Voltage Control generates two independend DC voltages from it. The first one is 15V DC to supply the trains and the second one is 5V DC to supply the microcontroller in the system. The voltages are adjustable by potentiometers and can be independently disconnected by jumper. 
-		 		</p>		 		 
-		 	</div>
-	 	
+
+				<p>
+		 			The bidirectional square-wave signal will be generated through an H-bridge of MOSFETs. To toggle the MOSFETs as fast as possible, triggered by a 5V signal from an Atmega8 microcontoller, MOSFET driver are needed. The MCP1407 E/P is a high speed driver which provides a maximum capacity of 10.000pF in a few ns.	
+		 		</p>	
+
+				</figure>
+								 	
+	 		</div>
+
+
+	 		<div>
+	 			<figure>
+	 				<h3>First testcycle</h3>
+	 				<figure>
+	 					<iframe width="320" height="180" src="https://www.youtube.com/embed/Oo8jRu5kZ2Y?rel=0" frameborder="0" allowfullscreen></iframe>
+	 					<figcaption>Signal generator test</figcaption>
+					</figure>
+					<figure>
+	 					<iframe width="320" height="180" src="https://www.youtube.com/embed/XuPn8Hw9MqA?rel=0" frameborder="0" allowfullscreen></iframe>
+	 					<figcaption>Signal generator test</figcaption>
+					</figure>	
+					<p>
+		 				After developing the power supply and the signal generator the first tests were to find out whether the circuits are able to encode a signal which can be decoded by a train. A STM32F407 development board generates the signal of driving forward, stopping and driving backward. Everything worked well so far but I decided to replace the STM32F407 by a BeagleBone Black single-board computer.
+		 			</p>
+	 			</figure>			
+	 		</div>
 	</body>
 </html>
