@@ -1,0 +1,95 @@
+div.contentSection {
+	padding: 5px;
+	float: right;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 40px;
+}
+
+div.contentClass {
+	visibility: hidden;
+}
+
+div.headerSection {
+	padding: 5px;
+	float: right;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+}
+
+
+div.imageVertical {
+	width: 320px;
+	height: 416px;
+
+}
+
+div.imageHorizontal {
+	width: 320px;
+	height: 266px;
+}
+
+#unfoldInfo {
+	font-size:0.7em;
+}
+
+#unfoldAll {
+	font-size:1.0em;
+	
+}
+a {
+	color: #f4a460;
+}
+
+body{
+	margin: 20px;
+	background-color: #222;
+	color: #FFF;
+	text-align: justify;
+}
+h1 {
+	font-family: Ubuntu, sans-serif;
+	color: #FFF;
+	margin: 0;
+}
+
+figure {	
+	padding: 5px;
+	
+	float: right;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+}
+
+figure img {
+  	border-radius: 3px 3px 0 0;
+}
+
+figure figcaption {
+  	padding: 2px 4px 2px 4px;
+  	background-color: #636363;
+  	color: #cccccc;
+  	font-style: italic;
+  	border-radius: 0 0 3px 3px;
+}
+
+iframe {
+	padding: 5px;
+	float: right;
+		border: 1px solid #cccccc;
+		border-radius: 5px;
+}
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+th, td {
+	padding: 7px;
+}
+thead {
+	font-size:1.2em;
+	font-weight: bold;
+}
+tbody {
+	font-size:0.8em;
+}
