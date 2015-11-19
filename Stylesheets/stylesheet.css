@@ -3,11 +3,7 @@ div.contentSection {
 	float: right;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
-	height: 40px;
-}
-
-div.contentClass {
-	visibility: hidden;
+	
 }
 
 div.headerSection {
@@ -46,6 +42,7 @@ body{
 	background-color: #222;
 	color: #FFF;
 	text-align: justify;
+	overflow-y:scroll;
 }
 h1 {
 	font-family: Ubuntu, sans-serif;
@@ -54,8 +51,7 @@ h1 {
 }
 
 figure {	
-	padding: 5px;
-	
+	padding: 5px;	
 	float: right;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
@@ -76,8 +72,8 @@ figure figcaption {
 iframe {
 	padding: 5px;
 	float: right;
-		border: 1px solid #cccccc;
-		border-radius: 5px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
 }
 table, th, td {
 	border: 1px solid black;
